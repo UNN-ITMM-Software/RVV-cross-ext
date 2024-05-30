@@ -2,3 +2,7 @@
 	path = gem5
 	url = https://github.com/ValentinV95/gem5.git
 	branch = rvv_cross
+[submodule "riscv-gnu-toolchain"]
+	path = riscv-gnu-toolchain
+	url = https://github.com/ValentinV95/riscv-gnu-toolchain.git
+	branch = rvv_cross
