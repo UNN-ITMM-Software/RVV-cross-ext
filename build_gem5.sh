@@ -10,5 +10,6 @@ fi
 
 git submodule update --init --recursive gem5
 cd gem5
+pip install -r requirements.txt
 python3 `which scons` ./build/RISCV/gem5.opt $th
 cd ..
