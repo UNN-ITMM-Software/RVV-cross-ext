@@ -23,3 +23,6 @@ pwd_path=`pwd`
 ./configure --prefix=${pwd_path}/../toolchain/ --disable-linux --with-arch=rv64gcv
 make newlib $th
 cd ..
+
+ln -sf ${pwd_path}/../toolchain_bin/bin/riscv64-unknown-elf-gcc ${pwd_path}/../toolchain_bin/bin/rvv-gcc
+ln -sf ${pwd_path}/../toolchain_bin/bin/riscv64-unknown-elf-g++ ${pwd_path}/../toolchain_bin/bin/rvv-g++
