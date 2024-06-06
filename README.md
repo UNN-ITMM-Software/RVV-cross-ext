@@ -7,6 +7,7 @@ For our work, we use gem5. This repository contains a submodule with the modifie
 ```shell
 sudo apt install build-essential git m4 scons zlib1g zlib1g-dev libprotobuf-dev protobuf-compiler libprotoc-dev libgoogle-perftools-dev python3-dev libboost-all-dev pkg-config python3-tk
 ```
+You may also need to install additional Python libraries that are required by gem5 (```pip install -r requirements.txt```).
 
 gem5 itself can be built using the standard instructions of this package. We recommend using the suggested script (the built package will be located in ./gem5_bin/RISCV):
 
@@ -26,6 +27,28 @@ Changes in the corresponding submodule are contained in patches. Therefore, for 
 ```shell
 sh build_toolchain.sh
 ```
+
+If you used a script, then the environment variables can be configured by the script:
+
+```shell
+source compiler_vars.sh
+```
+
+After completing all the steps, the compilers will be accessible under the names ```rvv-gcc``` and ```rvv-g++```. If you have not used the scripts we recommended, then the names and paths to the compiler may differ.
+
+## Example core
+
+In our experiments, we employ our proposed RVV-enabled version of the RISC-V core configuration. Expert users can tailor their own settings.
+
+Additionally, in the gem5_board folder, we provide a script that allows the binary to run on certain standard boards in system call mode:
+
+```shell
+<path_to_gem5_dir>/RISCV/gem5.opt binary_run.py <your_binary>
+```
+
+## Simple example
+
+The code_example folder contains code showing the operation of the proposed instruction
 
 ## Usage
 Intrinsic list:
