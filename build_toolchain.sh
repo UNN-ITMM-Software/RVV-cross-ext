@@ -24,5 +24,5 @@ pwd_path=`pwd`
 make newlib $th
 cd ..
 
-ln -sf ${pwd_path}/../toolchain_bin/bin/riscv64-unknown-elf-gcc ${pwd_path}/../toolchain_bin/bin/rvv-gcc
-ln -sf ${pwd_path}/../toolchain_bin/bin/riscv64-unknown-elf-g++ ${pwd_path}/../toolchain_bin/bin/rvv-g++
+ln -sf ${pwd_path}/../toolchain/bin/riscv64-unknown-elf-gcc ${pwd_path}/../toolchain/bin/rvv-gcc
+ln -sf ${pwd_path}/../toolchain/bin/riscv64-unknown-elf-g++ ${pwd_path}/../toolchain/bin/rvv-g++
