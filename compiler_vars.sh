@@ -2,4 +2,4 @@
 
 pwd_path=`pwd`
 
-export PATH=${pwd_path}/toolchain_bin/bin/:$PATH
+export PATH=${pwd_path}/toolchain/bin/:$PATH
